@@ -1,6 +1,3 @@
-Here’s a friendly, clear, and professional `README.md` for your GitHub repository that covers both Task 1 and Task 2:
-
-```markdown
 # Insurance Risk Prediction Project
 
 Welcome to the **Insurance Risk Prediction** project! This repository contains the code and resources for tasks related to Exploratory Data Analysis (EDA), Data Version Control (DVC), and CI/CD with GitHub Actions.
@@ -122,12 +119,6 @@ pip install dvc
 - **Data Versioning:** Successful setup and use of DVC for data tracking.
 - **Commit Messages:** Well-defined commit messages and version control of data changes.
 - **Data Push to Remote:** Successful push of versioned data to the DVC remote storage.
-
----
-
-Feel free to explore the project, provide feedback, and contribute to its development!
-
-```
 
 ### Key Points in this `README.md`:
 - Clear sections for both Task 1 and Task 2.
