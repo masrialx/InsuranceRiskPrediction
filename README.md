@@ -1,6 +1,6 @@
 # Insurance Risk Prediction Project
 
-Welcome to the **Insurance Risk Prediction** project! This repository contains the code and resources for tasks related to Exploratory Data Analysis (EDA), Data Version Control (DVC), and CI/CD with GitHub Actions.
+Welcome to the **Insurance Risk Prediction** project! This repository contains the code and resources for tasks related to Exploratory Data Analysis (EDA), Data Version Control (DVC), CI/CD with GitHub Actions, A/B Hypothesis Testing, and Statistical Modeling.
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -12,11 +12,22 @@ Welcome to the **Insurance Risk Prediction** project! This repository contains t
   - [Install DVC](#install-dvc)
   - [Set Up Local Remote Storage](#set-up-local-remote-storage)
   - [Add Data](#add-data)
+- [Task 3: A/B Hypothesis Testing](#task-3-ab-hypothesis-testing)
+  - [Select Metrics](#select-metrics)
+  - [Data Segmentation](#data-segmentation)
+  - [Statistical Testing](#statistical-testing)
+  - [Analyze and Report](#analyze-and-report)
+- [Task 4: Statistical Modeling](#task-4-statistical-modeling)
+  - [Data Preparation](#data-preparation)
+  - [Modeling Techniques](#modeling-techniques)
+  - [Model Building](#model-building)
+  - [Model Evaluation](#model-evaluation)
+  - [Feature Importance Analysis](#feature-importance-analysis)
 - [Getting Started](#getting-started)
 - [Key Performance Indicators (KPIs)](#key-performance-indicators-kpis)
 
 ## Project Overview
-This project aims to analyze insurance data and predict risk factors. The tasks have been divided into two main sections: Git and GitHub setup for version control, CI/CD pipelines, and data analysis using Exploratory Data Analysis (EDA) and Data Version Control (DVC).
+This project aims to analyze insurance data and predict risk factors. The tasks have been divided into four main sections: Git and GitHub setup for version control, CI/CD pipelines, data analysis using Exploratory Data Analysis (EDA) and Data Version Control (DVC), A/B Hypothesis Testing, and Statistical Modeling.
 
 ## Task 1: Git and GitHub
 
@@ -85,6 +96,52 @@ Push your versioned data to the local storage:
 dvc push
 ```
 
+## Task 3: A/B Hypothesis Testing
+
+### Select Metrics
+Choose the key performance indicator (KPI) that will measure the impact of the features being tested.
+
+### Data Segmentation
+- **Group A (Control Group):** Plans without the feature.
+- **Group B (Test Group):** Plans with the feature.
+- For features with more than two classes, you may need to select two categories to split the data as Group A and Group B. Ensure the two groups are statistically equivalent except for the feature being tested.
+
+### Statistical Testing
+- Conduct appropriate tests such as chi-squared for categorical data or t-tests/z-tests for numerical data.
+- Analyze the p-value from the statistical test:
+  - If p-value < 0.05, reject the null hypothesis.
+  - If p-value >= 0.05, fail to reject the null hypothesis.
+
+### Analyze and Report
+Analyze the statistical outcomes to determine if there's evidence to reject the null hypotheses. Document all findings and interpret the results within the context of their impact on business strategy and customer experience.
+
+## Task 4: Statistical Modeling
+
+### Data Preparation
+- **Handling Missing Data:** Impute or remove missing values.
+- **Feature Engineering:** Create new features that might be relevant to TotalPremium and TotalClaims.
+- **Encoding Categorical Data:** Use one-hot encoding or label encoding to make categorical data suitable for modeling.
+- **Train-Test Split:** Divide the data into a training set and a test set, typically using a 70:30 or 80:20 ratio.
+
+### Modeling Techniques
+- **Linear Regression**
+- **Decision Trees**
+- **Random Forests**
+- **Gradient Boosting Machines (GBMs):**
+  - **XGBoost**
+
+### Model Building
+- Implement the selected models (Linear Regression, Random Forests, and XGBoost).
+
+### Model Evaluation
+- Evaluate each model using appropriate metrics like accuracy, precision, recall, and F1-score.
+
+### Feature Importance Analysis
+- Analyze which features are most influential in predicting retention.
+- Use SHAP (SHapley Additive exPlanations) or LIME (Local Interpretable Model-agnostic Explanations) to interpret the model's predictions.
+
+### Report Comparison Between Each Model's Performance
+
 ## Getting Started
 
 1. Clone the repository:
@@ -120,10 +177,19 @@ pip install dvc
 - **Commit Messages:** Well-defined commit messages and version control of data changes.
 - **Data Push to Remote:** Successful push of versioned data to the DVC remote storage.
 
+### Task 3 KPIs:
+- **Hypothesis Testing:** Successful implementation of A/B testing for different hypotheses.
+- **Statistical Analysis:** Proper statistical testing and correct interpretation of p-values.
+- **Reporting:** Clear and concise documentation of findings and their impact on business strategy.
+
+### Task 4 KPIs:
+- **Data Preparation:** Handling missing data and proper feature engineering.
+- **Model Building:** Successful implementation of various machine learning models.
+- **Model Evaluation:** Evaluation of models with appropriate metrics.
+- **Model Interpretability:** Use of SHAP or LIME for feature importance analysis and model interpretation.
+
 ### Key Points in this `README.md`:
-- Clear sections for both Task 1 and Task 2.
+- Clear sections for all four tasks.
 - Instructions for getting started with the repository and setting up the environment.
 - Defined KPIs that explain the key objectives for each task.
 - Friendly and helpful language for easy understanding.
-
-You can copy and paste this into your `README.md` file in the repository. Let me know if you need any further modifications!
